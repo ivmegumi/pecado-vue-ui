@@ -625,19 +625,18 @@ export const showComponents =[
 			tag: 'my-backlog',
 			tagIcon: 'input',
 			defaultValue: undefined,
-			required: true,
-			layout: 'native',
+			required: undefined,
+			layout: 'raw',
 			span: 24,
-			// document: 'https://element.eleme.cn/#/zh-CN/component/input',
-			// 正则校验规则
-			regList: []
+			document: 'https://element.eleme.cn/#/zh-CN/component/tabs',
+      dataType:'dynamic',
+      url: '/oa/task/todo',
+      dataConsumer: 'data',
+			dataPath: 'data',
+      method:'get',
+      show:true,
 		},
-		// 组件的插槽属性
-		__slot__: {
-			prepend: '',
-			append: ''
-		},
-		style: { width: '100%' }
+    url: '/oa/task/todo',
 	},
   {
 		// 组件的自定义配置

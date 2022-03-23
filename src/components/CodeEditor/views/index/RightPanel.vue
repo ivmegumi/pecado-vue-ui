@@ -424,8 +424,7 @@
 						</div>
 						<el-divider />
 					</template>
-
-					<template v-if="['el-cascader', 'el-table','up-frame'].includes(activeData.__config__.tag)">
+					<template v-if="['el-cascader', 'el-table','up-frame', 'my-backlog'].includes(activeData.__config__.tag)">
 						<el-divider>选项</el-divider>
 						<el-form-item v-if="activeData.__config__.dataType" label="数据类型">
 							<el-radio-group v-model="activeData.__config__.dataType" size="small">
@@ -502,6 +501,15 @@
 						</div>
 						<el-divider />
 					</template>
+					<template v-if="['my-backlog'].includes(activeData.__config__.tag)">
+						<el-divider>数据说明</el-divider>
+            data下必须含有records数组对象<br />
+            records数组对象中的对象必含以下字段：<br />
+            title：待办内容<br />
+            createName：创建人<br />
+            createTime：创建时间<br />
+						<el-divider />
+          </template>
 
 					<el-form-item v-if="activeData.__config__.optionType !== undefined" label="选项样式">
 						<el-radio-group v-model="activeData.__config__.optionType">
